@@ -1,15 +1,101 @@
-{"intents":[
-  { "tag": "saudacao",
-    "patterns":["Ola","Opa","Oi", "tudo bem"],
-    "responses": ["Oi","Olá"]
-  },
-  { "tag": "despedida",
-    "patterns":["valeu","tchau","Obrigado","tks"],
-    "responses": ["Até breve","Falou"]
-  },
-  { "tag": "data_prova",
-    "patterns":["Quando sera a prova?","A prova será em que dia?"],
-    "responses": ["no dia 26"]
-  }
-]
+{
+  "intents": [
+    {
+      "tag": "saudacao",
+      "patterns": ["Ola", "Opa", "Oi", "tudo bem"],
+      "responses": ["Oi", "Olá"]
+    },
+    {
+      "tag": "despedida",
+      "patterns": ["valeu", "tchau", "Obrigado", "tks"],
+      "responses": ["Até breve", "Falou"]
+    },
+    {
+      "tag": "integrantes_grupo",
+      "patterns": [
+        "Quantos integrantes deve ter o grupo de TCC?",
+        "Grupo de quantos?",
+        "Quantas pessoas?",
+        "Quantos integrantes?"
+      ],
+      "responses": ["Os grupos devem buscar ter 4 integrantes"]
+    },
+    {
+      "tag": "prof_orientador_outro_departamento",
+      "patterns": [
+        "O professor orientador pode ser de outro departamento?",
+        "O departamento do orientador precisa ser o mesmo do meu curso?"
+      ],
+      "responses": [
+        "Sem problemas, o professor orientador pode ser de outro departamento!"
+      ]
+    },
+    {
+      "tag": "cronograma_aulas",
+      "patterns": [
+        "Onde posso encontrar a programação das aulas?",
+        "Onde encontro o cronograma?",
+        "Onde encontro as datas?",
+        "Data das entregas"
+      ],
+      "responses": ["O cronograma da disciplina pode ser encontrado no Moodle"]
+    },
+    {
+      "tag": "atividades_e_entregas",
+      "patterns": [
+        "Onde posso enviar as atividades e entregas?",
+        "Onde envio as atividades?"
+      ],
+      "responses": [
+        "As atividades e entregas devem ser enviadas no Moodle nas datas determinadas"
+      ]
+    },
+    {
+      "tag": "grupo_whatsapp",
+      "patterns": [
+        "Como posso participar do grupo do WhatsApp?",
+        "Onde posso tirar minha dúvidas?"
+      ],
+      "responses": [
+        "Se você não participa do grupo do WhatsApp da disciplina, você pode solicitar ao professor Ricardo Destro"
+      ]
+    },
+    {
+      "tag": "prazos",
+      "patterns": [
+        "Qual o prazo para desenvolver o trabalho?",
+        "Quanto tempo tenho?",
+        "Quantos semestres tenho para fazer?"
+      ],
+      "responses": [
+        "Os alunos têm dois semestres para desenvolver todas as atividades relacionadas ao trabalho, e no final de cada semestre serão avaliados por uma banca de professores"
+      ]
+    },
+    {
+      "tag": "avaliacao_final",
+      "patterns": [
+        "Como é a avaliação final?",
+        "Como é a banca?",
+        "Forma de avaliação",
+        "Como a banca avalia?"
+      ],
+      "responses": [
+        "A avaliação final do trabalho é uma composição da avaliação da banca, do professor orientador e dos professores da disciplina de Trabalho de Final de Curso.\n\nA avaliação da banca é definitiva, ou seja, é ela quem determina se o trabalho será aprovado ou não.\n\nEmbora o trabalho seja realizado em grupo, a avaliação será individual, ou seja, o aluno será avaliado por sua contribuição efetiva no trabalho realizado."
+      ]
+    },
+    {
+      "tag": "resultado_final",
+      "patterns": [
+        "Qual é o resultado final do TCC?",
+        "O que devo entregar?",
+        "Quais são as entregas?",
+        "O que preciso fazer?",
+        "O que preciso escrever?",
+        "Preciso criar um programa?"
+      ],
+      "responses": [
+        "Para o resultado final do TCC é esperado uma monografia e um programa/artefato desenvolvido pelos integrantes do grupo."
+      ]
+    }
+  ]
 }

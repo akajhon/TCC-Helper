@@ -3,7 +3,6 @@
 # thanks to Jere Xu ;)
 
 
-
 import numpy as np
 import json
 import pickle
@@ -17,6 +16,7 @@ from tensorflow.keras.optimizers.legacy import SGD
 
 
 import random
+
 
 class ChatBot:
     words = []
@@ -47,7 +47,8 @@ class ChatBot:
                 if intent['tag'] not in self.classes:
                     self.classes.append(intent['tag'])
 
-        self.words = [self.lemmatizer.lemmatize(w.lower()) for w in self.words if w not in self.ignore_words]
+        self.words = [self.lemmatizer.lemmatize(
+            w.lower()) for w in self.words if w not in self.ignore_words]
         self.words = sorted(list(set(self.words)))
 
         self.classes = sorted(list(set(self.classes)))
@@ -70,7 +71,8 @@ class ChatBot:
             # list of tokenized words for the pattern
             pattern_words = doc[0]
             # lemmatize each word - create base word, in attempt to represent related words
-            pattern_words = [self.lemmatizer.lemmatize(word.lower()) for word in pattern_words]
+            pattern_words = [self.lemmatizer.lemmatize(
+                word.lower()) for word in pattern_words]
             # create our bag of words array with 1, if word match found in current pattern
             for w in self.words:
                 bag.append(1) if w in pattern_words else bag.append(0)
@@ -82,7 +84,7 @@ class ChatBot:
             training.append([bag, output_row])
         # shuffle our features and turn into np.array
         random.shuffle(training)
-        training = np.array(training,dtype=object)
+        training = np.array(training, dtype=object)
         # create train and test lists. X - patterns, Y - intents
         train_x = list(training[:, 0])
         train_y = list(training[:, 1])
@@ -91,7 +93,8 @@ class ChatBot:
         # Create model - 3 layers. First layer 128 neurons, second layer 64 neurons and 3rd output layer contains number of neurons
         # equal to number of intents to predict output intent with softmax
         model = Sequential()
-        model.add(Dense(128, input_shape=(len(train_x[0]),), activation='relu'))
+        model.add(Dense(128, input_shape=(
+            len(train_x[0]),), activation='relu'))
         model.add(Dropout(0.5))
         model.add(Dense(64, activation='relu'))
         model.add(Dropout(0.5))
@@ -99,10 +102,12 @@ class ChatBot:
 
         # Compile model. Stochastic gradient descent with Nesterov accelerated gradient gives good results for this model
         sgd = SGD(learning_rate=0.01, decay=1e-6, momentum=0.9, nesterov=True)
-        model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
+        model.compile(loss='categorical_crossentropy',
+                      optimizer=sgd, metrics=['accuracy'])
 
         # fitting and saving the model
-        hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
+        hist = model.fit(np.array(train_x), np.array(train_y),
+                         epochs=200, batch_size=5, verbose=1)
         model.save('chatbot_model.h5', hist)
 
         self.model = model
@@ -118,11 +123,11 @@ class ChatBot:
 
     def clean_up_sentence(self, sentence):
         sentence_words = nltk.word_tokenize(sentence)
-        sentence_words = [self.lemmatizer.lemmatize(word.lower()) for word in sentence_words]
+        sentence_words = [self.lemmatizer.lemmatize(
+            word.lower()) for word in sentence_words]
         return sentence_words
 
-
-    def bow(self,sentence, words, show_details=True):
+    def bow(self, sentence, words, show_details=True):
         # tokenize the pattern
         sentence_words = self.clean_up_sentence(sentence)
         # bag of words - matrix of N words, vocabulary matrix
@@ -136,18 +141,18 @@ class ChatBot:
                         print("found in bag: %s" % w)
         return (np.array(bag))
 
-
-    def predict_class(self,sentence, model):
+    def predict_class(self, sentence, model):
         # filter out predictions below a threshold
-        p = self.bow(sentence, self.words,show_details=False)
+        p = self.bow(sentence, self.words, show_details=False)
         res = model.predict(np.array([p]))[0]
         ERROR_THRESHOLD = 0.25
-        results = [[i,r] for i,r in enumerate(res) if r>ERROR_THRESHOLD]
+        results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
         # sort by strength of probability
         results.sort(key=lambda x: x[1], reverse=True)
         return_list = []
         for r in results:
-            return_list.append({"intent": self.classes[r[0]], "probability": str(r[1])})
+            return_list.append(
+                {"intent": self.classes[r[0]], "probability": str(r[1])})
         ########## print(return_list)
         return return_list
 
@@ -155,7 +160,7 @@ class ChatBot:
         tag = ints[0]['intent']
         list_of_intents = intents_json['intents']
         for i in list_of_intents:
-            if(i['tag']== tag):
+            if (i['tag'] == tag):
                 ######### print("achou tag %s"%(tag))
                 result = random.choice(i['responses'])
                 break
