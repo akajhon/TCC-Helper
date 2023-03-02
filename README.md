@@ -136,7 +136,7 @@ Cada intenção é composta de uma tag ("tag") que identifica a intenção, um c
 
 No arquivo acima, temos intenções como "saudação", "despedida", "integrantes_grupo", "prof_orientador_outro_departamento", "cronograma_aulas", "atividades_e_entregas", "grupo_whatsapp", "prazos", "avaliacao_final" e "resultado_final".
 
-## 📚 Descrição das Tags Utilizadas
+## 🕮 Descrição das Tags Utilizadas
 
 * **"saudacao"**: Essa tag contém as expressões de cumprimento que o chatbot pode reconhecer e responder de forma adequada, como "Olá", "Oi" e "Tudo bem". As respostas para essas expressões também estão definidas na tag, como "Oi" e "Olá".
 
