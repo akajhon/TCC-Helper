@@ -2,13 +2,13 @@
   "intents": [
     {
       "tag": "saudacao",
-      "patterns": ["Ola", "Opa", "Oi", "tudo bem"],
+      "patterns": ["Olá", "Opa", "Oi", "Tudo Bem"],
       "responses": ["Oi", "Olá"]
     },
     {
       "tag": "despedida",
-      "patterns": ["valeu", "tchau", "Obrigado", "tks"],
-      "responses": ["Até breve", "Falou"]
+      "patterns": ["Valeu", "tchau", "Obrigado", "tks"],
+      "responses": ["Até breve", "Falou", "Tchau"]
     },
     {
       "tag": "integrantes_grupo",
@@ -54,10 +54,11 @@
       "tag": "grupo_whatsapp",
       "patterns": [
         "Como posso participar do grupo do WhatsApp?",
-        "Onde posso tirar minha dúvidas?"
+        "Onde posso tirar minha dúvidas?",
+        "WhatsApp"
       ],
       "responses": [
-        "Se você não participa do grupo do WhatsApp da disciplina, você pode solicitar ao professor Ricardo Destro"
+        "Você pode tirar algumas de suas dúvidas através do grupo de WhatsApp! Se você não participa do grupo do WhatsApp da disciplina, você pode solicitar ao professor Ricardo Destro"
       ]
     },
     {
