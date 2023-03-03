@@ -27,16 +27,6 @@ elif args.load:
         handle_response(response, intencao)
         input_box.delete(0, tk.END)
 
-    #def get_response():
-    #    user_input = input_box.get()
-    #    response, intencao = myChatBot.chatbot_response(user_input)
-    #    insert_user_message(user_input)
-    #    insert_bot_message(response)
-    #    input_box.delete(0, tk.END)
-    #    if intencao[0]['intent'] == 'despedida':
-    #        insert_bot_message(response)
-    #        root.destroy()
-
     root = tk.Tk()
     root.title("TCC-Helper")
     root.configure(bg="white")
