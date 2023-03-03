@@ -156,6 +156,11 @@ No arquivo acima, temos intenções como "saudação", "despedida", "integrantes
 
 * **"avaliacao_final"**: Nessa tag, é explicado como funciona a avaliação final do trabalho do TCC. As diferentes formas de expressar a pergunta sobre isso estão definidas na tag, assim como a resposta do chatbot, que explica que a avaliação final é uma composição da avaliação da banca, do professor orientador e dos professores da disciplina. Também é esclarecido que a avaliação da banca é definitiva e que a avaliação será individual, mesmo que
 
+## 🗨️ Exemplo de Diálogo
+<p align="center">
+  <img alt="Dialog" align="center" src ="https://github.com/hugolinhareso/TCC-Helper/blob/main/resources/dialog.png" width="700" height="500"></img>
+<p>
+
 ## 🧑‍💻 Autores
 
 **Hugo Linhares**
