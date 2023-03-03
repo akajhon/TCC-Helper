@@ -9,7 +9,7 @@ Verifique se você possui o [Python3+](https://www.python.org/downloads/) instal
 Antes de usar o chatbot, instale os pacotes necessários utilizando:
 
 ```sh
-pip install requirements.txt -r
+pip install -r requirements.txt
 ```
 
 Com os pacotes instalados, para treinar o ChatBot, utilize o comando abaixo:
