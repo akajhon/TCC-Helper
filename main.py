@@ -11,21 +11,31 @@ parser.add_argument('-l', '--load', help='Carregar o modelo e executar a GUI.', 
 args = parser.parse_args()
 
 if args.train:
-    #criar o modelo
     myChatBot.createModel()
 elif args.load:
-    #apenas carregar um modelo pronto
     myChatBot.loadModel()
-    #criar a GUI
+
+    def handle_response(response, intencao):
+        insert_bot_message(response)
+        if intencao[0]['intent'] == 'despedida':
+            root.after(1000, root.destroy)
+
     def get_response():
         user_input = input_box.get()
         response, intencao = myChatBot.chatbot_response(user_input)
         insert_user_message(user_input)
-        insert_bot_message(response)
+        handle_response(response, intencao)
         input_box.delete(0, tk.END)
-        if intencao[0]['intent'] == 'despedida':
-            insert_bot_message(response)
-            root.destroy()
+
+    #def get_response():
+    #    user_input = input_box.get()
+    #    response, intencao = myChatBot.chatbot_response(user_input)
+    #    insert_user_message(user_input)
+    #    insert_bot_message(response)
+    #    input_box.delete(0, tk.END)
+    #    if intencao[0]['intent'] == 'despedida':
+    #        insert_bot_message(response)
+    #        root.destroy()
 
     root = tk.Tk()
     root.title("TCC-Helper")
