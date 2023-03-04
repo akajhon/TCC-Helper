@@ -188,6 +188,10 @@ No arquivo acima, temos intenções como "saudação", "despedida", "integrantes
   <img alt="Dialog" align="center" src ="https://github.com/hugolinhareso/TCC-Helper/blob/main/resources/dialog.png" width="900" height="600"></img>
 <p>
 
+## 📹 Vídeo Descritivo
+
+https://user-images.githubusercontent.com/69048604/222926801-0c27a7c1-29fb-4783-b9d3-e9000043833c.mp4
+
 ## 🧑‍💻 Autores
 
 **Hugo Linhares**
