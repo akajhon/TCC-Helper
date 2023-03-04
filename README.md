@@ -1,6 +1,6 @@
 # TCC-Helper
 
-Um chatbot criado para auxiliar com dúvidas da disciplina de TCC1.
+Um chatbot criado para auxiliar com dúvidas da disciplina de TCC 1.
 
 ## 🚀 Inicialização
 
