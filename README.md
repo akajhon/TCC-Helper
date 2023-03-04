@@ -167,21 +167,21 @@ No arquivo acima, temos intenções como "saudação", "despedida", "integrantes
 
 * **"tudo_bem"**: Essa tag trata de como a outra pessoa está se sentindo ou se está tudo bem com ela. As respostas podem variar de "Tudo ótimo" a "Estou muito bem". 
 
-* **"integrantes_grupo"**: Essa tag trata de uma questão importante para quem está fazendo TCC: quantas pessoas devem compor o grupo de trabalho. A tag contém as diferentes formas que o usuário pode expressar a pergunta sobre o número de integrantes e a resposta do chatbot, que é "Os grupos devem buscar ter 4 integrantes".
+* **"integrantes_grupo"**: Essa tag trata de uma questão importante para quem está fazendo o TCC: quantas pessoas devem compor o grupo de trabalho. A tag contém as diferentes formas que o usuário pode expressar a pergunta sobre o número de integrantes e a resposta do chatbot, que é "Os grupos devem buscar ter 4 integrantes".
 
-* **"prof_orientador_outro_departamento"**: Nessa tag, é tratada a dúvida sobre a possibilidade de ter um professor orientador de outro departamento que não o do curso do aluno. As expressões que o usuário pode utilizar para perguntar sobre isso estão definidas na tag, assim como a resposta do chatbot, que tranquiliza o usuário afirmando que é possível ter um orientador de outro departamento.
+* **"prof_orientador_outro_departamento"**: Nessa tag, é tratada a dúvida sobre a possibilidade de ter um professor orientador de outro departamento que não o do curso do aluno. As expressões que o usuário pode utilizar para perguntar sobre isso estão definidas na tag, assim como a resposta do chatbot, que afirma ao aluno que é possível ter um orientador de outro departamento.
 
-* **""prof_TCC_Destro"**: Essa tag se refere ao professor responsável pela disciplina de trabalho final de curso (TCC) 1. A resposta indica que o professor é o Ricardo Destro, mas que o aluno deve escolher um orientador para ajudá-lo com o projeto.
+* **"prof_TCC_Destro"**: Essa tag se refere ao professor responsável pela disciplina de trabalho final de curso (TCC) 1. A resposta indica que o professor é o Ricardo Destro, mas que o aluno deve escolher um orientador para ajudá-lo com o projeto.
 
-* **"cronograma_aulas"**: Essa tag aborda a questão de onde encontrar as datas e programação das aulas relacionadas à disciplina do TCC. As diferentes formas de expressar a pergunta sobre isso estão definidas na tag, assim como a resposta do chatbot, que informa que o cronograma da disciplina pode ser encontrado no Moodle.
+* **"cronograma_aulas"**: Essa tag aborda a questão de onde encontrar as datas e programação das aulas relacionadas à disciplina de TCC. As diferentes formas de expressar a pergunta sobre isso estão definidas na tag, assim como a resposta do chatbot, que informa que o cronograma da disciplina pode ser encontrado no Moodle.
 
 * **"atividades_e_entregas"**: Aqui é tratada a questão de onde enviar as atividades e entregas relacionadas ao TCC. As diferentes formas de expressar a pergunta sobre isso estão definidas na tag, assim como a resposta do chatbot, que informa que as atividades e entregas devem ser enviadas no Moodle nas datas determinadas.
 
-* **"grupo_whatsapp"**: Nessa tag, é explicado como o usuário pode participar do grupo do WhatsApp para tirar dúvidas relacionadas à disciplina do TCC. As diferentes formas de expressar a pergunta sobre isso estão definidas na tag, assim como a resposta do chatbot, que informa que é possível solicitar a participação no grupo ao professor Ricardo Destro.
+* **"grupo_whatsapp"**: Nessa tag, é explicado como o aluno pode participar do grupo do WhatsApp para tirar dúvidas relacionadas à disciplina do TCC. As diferentes formas de expressar a pergunta sobre isso estão definidas na tag, assim como a resposta do chatbot, que informa que é possível solicitar a participação no grupo ao professor Ricardo Destro.
 
 * **"prazos"**: Essa tag aborda a questão do prazo para desenvolver o trabalho do TCC. As diferentes formas de expressar a pergunta sobre isso estão definidas na tag, assim como a resposta do chatbot, que informa que os alunos têm dois semestres para desenvolver todas as atividades relacionadas ao trabalho e que serão avaliados por uma banca de professores.
 
-* **"avaliacao_final"**: Nessa tag, é explicado como funciona a avaliação final do trabalho do TCC. As diferentes formas de expressar a pergunta sobre isso estão definidas na tag, assim como a resposta do chatbot, que explica que a avaliação final é uma composição da avaliação da banca, do professor orientador e dos professores da disciplina. Também é esclarecido que a avaliação da banca é definitiva e que a avaliação será individual, mesmo que
+* **"avaliacao_final"**: Nessa tag, é explicado como funciona a avaliação final do trabalho do TCC. As diferentes formas de expressar a pergunta sobre isso estão definidas na tag, assim como a resposta do chatbot, que explica que a avaliação final é uma composição da avaliação da banca, do professor orientador e dos professores da disciplina.
 
 ## 🗨️ Exemplo de Diálogo
 <p align="center">
