@@ -18,6 +18,7 @@ elif args.load:
     def handle_response(response, intencao):
         insert_bot_message(response)
         if intencao[0]['intent'] == 'despedida':
+            insert_bot_message("Espero ter esclarecido todas as suas dúvidas sobre o TCC!")
             root.after(1000, root.destroy)
 
     def get_response():
