@@ -31,13 +31,18 @@ python3 main.py -l
   "intents": [
     {
       "tag": "saudacao",
-      "patterns": ["Olá", "Opa", "Oi", "Tudo Bem"],
+      "patterns": ["Olá","Ola", "Oi"],
       "responses": ["Oi", "Olá"]
     },
     {
+      "tag": "tudo_bem",
+      "patterns": ["Tudo bem com você", "Tudo bem", "Como vai", "Tudo Joia"],
+      "responses": ["Tudo ótimo", "Tudo certo", "Estou muito bem"]
+    },
+    {
       "tag": "despedida",
-      "patterns": ["Valeu", "tchau", "Obrigado", "tks"],
-      "responses": ["Até breve", "Falou", "Tchau"]
+      "patterns": ["Valeu", "tchau", "Obrigado", "tks", "Muito Obrigado"],
+      "responses": ["Até breve","Até mais", "Tchau"]
     },
     {
       "tag": "integrantes_grupo",
@@ -53,10 +58,23 @@ python3 main.py -l
       "tag": "prof_orientador_outro_departamento",
       "patterns": [
         "O professor orientador pode ser de outro departamento?",
-        "O departamento do orientador precisa ser o mesmo do meu curso?"
+        "O departamento do orientador precisa ser o mesmo do meu curso?",
+        "Professor Orientador"
       ],
       "responses": [
         "Sem problemas, o professor orientador pode ser de outro departamento!"
+      ]
+    },
+    {
+      "tag": "prof_TCC_Destro",
+      "patterns": [
+        "Quem é o professor da matéria de TCC 1?",
+        "Quem é o responsável por TCC 1?",
+        "Professor de TCC 1",
+        "Qual o professor de TCC 1"
+      ],
+      "responses": [
+        "O Professor responsável pela matéria de Trabalho Final de Curso 1 (TCC) é o Ricardo Destro. Porém, você deve escolher um orientador para te ajudar com o projeto. "
       ]
     },
     {
@@ -65,7 +83,8 @@ python3 main.py -l
         "Onde posso encontrar a programação das aulas?",
         "Onde encontro o cronograma?",
         "Onde encontro as datas?",
-        "Data das entregas"
+        "Data das entregas",
+        "Qual a data da entrega"
       ],
       "responses": ["O cronograma da disciplina pode ser encontrado no Moodle"]
     },
@@ -73,7 +92,8 @@ python3 main.py -l
       "tag": "atividades_e_entregas",
       "patterns": [
         "Onde posso enviar as atividades e entregas?",
-        "Onde envio as atividades?"
+        "Onde envio as atividades?",
+        "Onde devo enviar as atividades já realizadas?"
       ],
       "responses": [
         "As atividades e entregas devem ser enviadas no Moodle nas datas determinadas"
@@ -95,7 +115,8 @@ python3 main.py -l
       "patterns": [
         "Qual o prazo para desenvolver o trabalho?",
         "Quanto tempo tenho?",
-        "Quantos semestres tenho para fazer?"
+        "Quantos semestres tenho para fazer?",
+        "Qual o prazo"
       ],
       "responses": [
         "Os alunos têm dois semestres para desenvolver todas as atividades relacionadas ao trabalho, e no final de cada semestre serão avaliados por uma banca de professores"
@@ -107,7 +128,9 @@ python3 main.py -l
         "Como é a avaliação final?",
         "Como é a banca?",
         "Forma de avaliação",
-        "Como a banca avalia?"
+        "Como a banca avalia?",
+        "Tem prova?",
+        "E a prova?"
       ],
       "responses": [
         "A avaliação final do trabalho é uma composição da avaliação da banca, do professor orientador e dos professores da disciplina de Trabalho de Final de Curso.\n\nA avaliação da banca é definitiva, ou seja, é ela quem determina se o trabalho será aprovado ou não.\n\nEmbora o trabalho seja realizado em grupo, a avaliação será individual, ou seja, o aluno será avaliado por sua contribuição efetiva no trabalho realizado."
@@ -142,9 +165,13 @@ No arquivo acima, temos intenções como "saudação", "despedida", "integrantes
 
 * **"despedida"**: Assim como a tag "saudacao", essa tag contém expressões de despedida que o chatbot pode reconhecer e responder de forma apropriada, como "tchau" e "obrigado". As respostas também estão definidas na tag, como "Até breve" e "Falou".
 
+* **"tudo_bem"**: Essa tag trata de como a outra pessoa está se sentindo ou se está tudo bem com ela. As respostas podem variar de "Tudo ótimo" a "Estou muito bem". 
+
 * **"integrantes_grupo"**: Essa tag trata de uma questão importante para quem está fazendo TCC: quantas pessoas devem compor o grupo de trabalho. A tag contém as diferentes formas que o usuário pode expressar a pergunta sobre o número de integrantes e a resposta do chatbot, que é "Os grupos devem buscar ter 4 integrantes".
 
 * **"prof_orientador_outro_departamento"**: Nessa tag, é tratada a dúvida sobre a possibilidade de ter um professor orientador de outro departamento que não o do curso do aluno. As expressões que o usuário pode utilizar para perguntar sobre isso estão definidas na tag, assim como a resposta do chatbot, que tranquiliza o usuário afirmando que é possível ter um orientador de outro departamento.
+
+* **""prof_TCC_Destro"**: Essa tag se refere ao professor responsável pela disciplina de trabalho final de curso (TCC) 1. A resposta indica que o professor é o Ricardo Destro, mas que o aluno deve escolher um orientador para ajudá-lo com o projeto.
 
 * **"cronograma_aulas"**: Essa tag aborda a questão de onde encontrar as datas e programação das aulas relacionadas à disciplina do TCC. As diferentes formas de expressar a pergunta sobre isso estão definidas na tag, assim como a resposta do chatbot, que informa que o cronograma da disciplina pode ser encontrado no Moodle.
 
@@ -158,7 +185,7 @@ No arquivo acima, temos intenções como "saudação", "despedida", "integrantes
 
 ## 🗨️ Exemplo de Diálogo
 <p align="center">
-  <img alt="Dialog" align="center" src ="https://github.com/hugolinhareso/TCC-Helper/blob/main/resources/dialog.png" width="700" height="500"></img>
+  <img alt="Dialog" align="center" src ="https://github.com/hugolinhareso/TCC-Helper/blob/main/resources/dialog.png" width="900" height="600"></img>
 <p>
 
 ## 🧑‍💻 Autores
